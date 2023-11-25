@@ -1,4 +1,3 @@
-const test = [{"id":3,"itemName":"Apple","expiryDate":"2023-11-29","dateNow":"1700913172805"},{"id":4,"itemName":"Strawberry","expiryDate":"2023-12-01","dateNow":"1700913172807"},{"id":5,"itemName":"Banana","expiryDate":"2024-11-29","dateNow":"1700914168290"},{"id":6,"itemName":"Cake","expiryDate":"2023-12-29","dateNow":"1700914168291"},{"id":7,"itemName":"Onion","expiryDate":"2023-12-07","dateNow":"1700915325635"},{"id":8,"itemName":"Beef","expiryDate":"2023-12-07","dateNow":"1700915325638"},{"id":9,"itemName":"Salad","expiryDate":"2023-11-30","dateNow":"1700915533278"},{"id":10,"itemName":"Rice","expiryDate":"2023-11-30","dateNow":"1700915533280"}]
 
 function convertMilliseconds(milliseconds) {
     const millisecondsPerDay = 24 * 60 * 60 * 1000;
@@ -51,7 +50,7 @@ export function processItems(items) {
             itemName: item.itemName,
             expiryDate: item.expiryDate,
             state: state,
-            timePassedPercentage: parseFloat(timePassedPercentage.toFixed(2)),
+            timePassedPercentage: 100 - parseFloat(timePassedPercentage.toFixed(2)),
             warningPercentage: parseFloat(warningPercentage.toFixed(2)),
             timeLeft: convertMilliseconds(expiryDate - currentTime),
             rawTimeLeft: (expiryDate - currentTime),

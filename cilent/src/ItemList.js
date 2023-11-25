@@ -52,7 +52,7 @@ const ItemList = ({ items, removeItem }) => {
         {foodData.filter((food) => {
           return food.state == "Expired";
         }).map((foodData) => (
-          <li className="expired" key={foodData.id}>
+          <li className="expired" key={foodData.id} style={{color: getGradientColor(foodData.warningPercentage)}}>
             <div>
               <strong>{foodData.itemName}</strong>
               <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
@@ -64,7 +64,7 @@ const ItemList = ({ items, removeItem }) => {
         {foodData.filter((food) => {
           return food.state == "Warning";
         }).map((foodData) => (
-          <li className="warning" key={foodData.id}>
+          <li className="warning" key={foodData.id} style={{color: getGradientColor(foodData.warningPercentage)}}> 
             <div>
               <strong>{foodData.itemName}</strong>
               <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
@@ -76,7 +76,7 @@ const ItemList = ({ items, removeItem }) => {
         {foodData.filter((food) => {
           return food.state == "Safe";
         }).map((foodData) => (
-          <li className="safe" key={foodData.id}>
+          <li className="safe" key={foodData.id} style={{color: getGradientColor(foodData.warningPercentage)}}> 
             <div>
               <strong>{foodData.itemName}</strong>
               <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
@@ -88,5 +88,13 @@ const ItemList = ({ items, removeItem }) => {
     </div>
   );
 };
+
+function getGradientColor(percentage) {
+  const red = 255 - Math.round((255-69) * (percentage / 100));
+  const green = 27 + Math.round((202-27) * (percentage / 100));
+  const blue = 107 + Math.round((255-107) * (percentage / 100));
+  return `rgb(${red}, ${green}, ${blue})`;
+}
+
 
 export default ItemList;
