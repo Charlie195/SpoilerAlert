@@ -3,7 +3,6 @@ import NightModeToggle from './NightModeToggle.js'
 import Header from './Header.js';
 import AddItemForm from './AddItemForm.js';
 import ItemList from './ItemList.js';
-import axios from 'axios';
 // import mysql from 'mysql';
 
 
@@ -24,12 +23,6 @@ function App() {
     setItems(updatedItems);
   };
 
-  const getFoods = () => {
-    axios.get("http://localhost:3001/foods").then((response) => {
-      console.log(response);
-    });
-  }
-
   // async function fetchData() {
   //   const pool = mysql.createPool({
   //     host: 'localhost',
@@ -46,9 +39,10 @@ function App() {
 
   return (
     <div className='container'>
+      <NightModeToggle toggleNightMode={toggleNightMode} nightMode={nightMode} />
       <div className={`app-container ${nightMode ? 'night-mode' : ''}`}>
         
-        <NightModeToggle toggleNightMode={toggleNightMode} nightMode={nightMode} />
+        
         
         
         <Header />
@@ -58,7 +52,6 @@ function App() {
         <ItemList className='but' items={items} removeItem={removeItem} />
         
       </div>
-      <button onClick={getFoods}></button>
     </div>
   );
 }

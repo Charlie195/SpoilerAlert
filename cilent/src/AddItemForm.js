@@ -20,7 +20,6 @@ const AddItemForm = ({ addItem }) => {
   
     if (itemName.trim() !== '' && expiryDate.trim() !== '') {
       addItem({ id: Date.now(), name: itemName, expiryDate });
-      addFood(); // Moved inside the validation check
       setItemName('');
       setExpiryDate('');
     }

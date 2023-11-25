@@ -1,32 +1,39 @@
-/* styles.css */
-
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  transition: color 0.5s; /* Add color transition for smoother changes */
+  transition: color 0.5s; 
 }
 
-.container {
+.container.night-mode  {
+
+  background-color: #f3f3f3;
+}
+.container{
   width: 100%;
+  height:100vh;
   padding-top: 0px;
+  background-color: #333;
 }
 
 .app-container {
-  max-width: 600px;
+  max-width: 1000px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #f4f4f4;
-  color: #333; /* Default color for light mode */
+
+  background-color: #333;
+  color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  transition: background-color 0.5s; /* Add background color transition */
+  transition: background-color 0.5s; 
 }
 
 .app-container.night-mode {
-  background-color: #333;
-  color: #fff; /* Color for dark mode */
+  background-color: #f3f3f3;
+  color: #333; 
 }
+
+
 
 h1 {
   text-align: center;
@@ -37,11 +44,13 @@ input {
   width: 100%;
   margin-bottom: 10px;
   transition: background-color 0.5s;
+  border-radius: 10px; 
+  background-color: #333;
+  color: #fff;
 }
 
 .app-container.night-mode input {
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
 }
 
 form {
@@ -52,13 +61,7 @@ form {
   justify-self: center;
 }
 
-button {
-  padding: 10px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
+
 
 ul {
   list-style: none;
@@ -78,21 +81,57 @@ li:last-child {
 }
 
 button {
-  background-color: #e74c3c;
-  color: #fff;
-  border: none;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  border-color: #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  color: #333;
+
   cursor: pointer;
+} 
+.app-container.night-mode button {
+
+  background-color: #333;
+  border-color: #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  border: 5px;
+  color: #ccc;
+
+  cursor: pointer;
+  transition: 0.5s;
 }
 
-/* Added styles for date input */
+/* Added styles for date input /
 input[type="date"] {
   padding: 8px;
   width: 100%;
   margin-bottom: 10px;
 }
 
-/* Additional styling for better spacing */
+/ Additional styling for better spacing */
 button,
 input {
   margin-bottom: 10px;
+}
+
+button.night-mode-toggle {
+  padding: 10px;
+
+  border: #ccc;
+  border-bottom: 1px solid #333;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s;
+  border-radius: 5px;
+
+}
+
+.container.night-mode button.night-mode-toggle {
+  background-color: #f3f3f3;
+  color: #333;
+  border-bottom: 1px solid #fff;
 }

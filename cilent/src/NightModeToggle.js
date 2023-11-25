@@ -4,10 +4,9 @@ import React from 'react';
 
 const NightModeToggle = ({ toggleNightMode, nightMode }) => {
   return (
-    <label>
-      <input type="checkbox" checked={nightMode} onChange={toggleNightMode} />
-      Night Mode
-    </label>
+    <button className={`night-mode-toggle ${nightMode ? 'night-mode' : ''}`} onClick={toggleNightMode}>
+      {nightMode ? 'Night Mode Off' : 'Night Mode On'}
+    </button>
   );
 };
 

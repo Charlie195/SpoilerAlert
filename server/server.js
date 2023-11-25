@@ -40,6 +40,17 @@ app.get("/foods", (req, res) => {
     });
   });
 
+app.delete("/delete/:id", (req, res) => {
+    const id = req.params.id;
+        db.query("DELETE FROM foods WHERE id = ?", id, (err, result) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(result);
+        }
+        });
+    });
+
 
 app.listen(3001, () => {
     console.log("yup");
