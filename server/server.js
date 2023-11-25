@@ -10,15 +10,16 @@ const db = mysql.createConnection({
     user: "root",
     host: "localhost",
     password: "password",
-    database: "spoiler_alert_send"
+    database: "foodtracker"
 })
 
 app.post("/create", (req, res) => {
-    const food = req.body.food;
+    const itemName = req.body.itemName;
     const expiryDate = req.body.expiryDate;
+    const dateNow = req.body.dateNow;
 
-    db.query("INSERT INTO sent_data (food, expiryDate) VALUES (?,?)", 
-    [food, expiryDate],
+    db.query("INSERT INTO foods (itemName, expiryDate, dateNow) VALUES (?,?,?)", 
+    [itemName, expiryDate, dateNow],
     (err, result) => {
         if (err) {
             console.log(err);
@@ -28,6 +29,16 @@ app.post("/create", (req, res) => {
         }
     })
 })
+
+app.get("/foods", (req, res) => {
+    db.query("SELECT * FROM foods", (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    });
+  });
 
 
 app.listen(3001, () => {
