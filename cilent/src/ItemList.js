@@ -43,6 +43,12 @@ const ItemList = ({ items, removeItem }) => {
       // console.log(processItems(test));
       // console.log(sortByRawTimeLeft(processItems(foodData)).id);
     });
+
+    const intervalId = setInterval(() => {
+      setFoodData(foodData);
+    }, 5 * 60 * 1000); 
+
+    return () => clearInterval(intervalId);
   }, [items]);
 
   return (

@@ -11,6 +11,8 @@ body {
   margin: 0;
   padding: 0;
   transition: color 0.5s; /* Add color transition for smoother changes */
+  
+  
 }
 
 .foodName {
@@ -43,7 +45,7 @@ body {
 }
 .container{
   width: 100%;
-  min-height: 100px;
+  min-height: 100vh;
   overflow: hidden;
   padding-top: 0px;
   background-color: #333;

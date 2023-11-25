@@ -25,6 +25,10 @@ const AddItemForm = ({ addItem }) => {
     }
   };
 
+  // Get the current date and format it as "YYYY-MM-DD"
+  const currentDate = new Date();
+  const formattedCurrentDate = currentDate.toISOString().split('T')[0];
+
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -43,6 +47,7 @@ const AddItemForm = ({ addItem }) => {
         onChange={(event) => {
           setExpiryDate(event.target.value);
         }}
+        min={formattedCurrentDate}
       />
       <button onClick={addFood}>Add Item</button>
     </form>
