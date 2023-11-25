@@ -22,11 +22,13 @@ const ItemList = ({ items, removeItem }) => {
     });
   };
 
+
+
   const displayTimeLeft = (time) => {
     if (time < 0) {
       return "NONE"
     }
-    return Math.ceil(time / 86400000)
+    return Math.ceil(time / 86400000) + " days";
   }
 
   useEffect(() => {
@@ -46,11 +48,11 @@ const ItemList = ({ items, removeItem }) => {
   return (
     <div>
       {foodData && <ul>
-        <h2>Expired</h2>
+        <h2 >Expired</h2>
         {foodData.filter((food) => {
           return food.state == "Expired";
         }).map((foodData) => (
-          <li key={foodData.id}>
+          <li className="expired" key={foodData.id}>
             <div>
               <strong>{foodData.itemName}</strong>
               <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
@@ -62,7 +64,7 @@ const ItemList = ({ items, removeItem }) => {
         {foodData.filter((food) => {
           return food.state == "Warning";
         }).map((foodData) => (
-          <li key={foodData.id}>
+          <li className="warning" key={foodData.id}>
             <div>
               <strong>{foodData.itemName}</strong>
               <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
@@ -74,7 +76,7 @@ const ItemList = ({ items, removeItem }) => {
         {foodData.filter((food) => {
           return food.state == "Safe";
         }).map((foodData) => (
-          <li key={foodData.id}>
+          <li className="safe" key={foodData.id}>
             <div>
               <strong>{foodData.itemName}</strong>
               <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
