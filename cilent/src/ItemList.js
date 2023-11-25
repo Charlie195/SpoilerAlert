@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from "react";
 
+
 const ItemList = ({ items, removeItem }) => {
   // const [addButtonPressed, setAddButtonPressed] = useState(false);
   // const [deleteButtonPressed, setDeleteButtonPressed] = useState(false);
@@ -11,7 +12,7 @@ const ItemList = ({ items, removeItem }) => {
     axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
       setFoodData(
         foodData.filter((val) => {
-          return val.id != id;
+          return val.id !== id;
         })
       );
     });

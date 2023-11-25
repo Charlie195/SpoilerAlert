@@ -38,7 +38,7 @@ function App() {
   // };
 
   return (
-    <div className='container'>
+    <div className={`container ${nightMode ? 'night-mode' : ''}`}>
       <NightModeToggle toggleNightMode={toggleNightMode} nightMode={nightMode} />
       <div className={`app-container ${nightMode ? 'night-mode' : ''}`}>
         
