@@ -46,7 +46,7 @@ const ItemList = ({ items, removeItem }) => {
   }, [items]);
 
   return (
-    <div>
+    <div className="itemList">
       {foodData && <ul>
         <h2 >Expired</h2>
         {foodData.filter((food) => {
@@ -54,7 +54,7 @@ const ItemList = ({ items, removeItem }) => {
         }).map((foodData) => (
           <li className="expired" key={foodData.id} style={{color: getGradientColor(foodData.warningPercentage)}}>
             <div>
-              <strong>{foodData.itemName}</strong>
+              <strong className='foodName'>{foodData.itemName}</strong>
               <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
             </div>
             <button onClick={() => deleteFood(foodData.id)}>Remove</button>
@@ -66,7 +66,7 @@ const ItemList = ({ items, removeItem }) => {
         }).map((foodData) => (
           <li className="warning" key={foodData.id} style={{color: getGradientColor(foodData.warningPercentage)}}> 
             <div>
-              <strong>{foodData.itemName}</strong>
+              <strong className='foodName'>{foodData.itemName}</strong>
               <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
             </div>
             <button onClick={() => deleteFood(foodData.id)}>Remove</button>
@@ -78,7 +78,7 @@ const ItemList = ({ items, removeItem }) => {
         }).map((foodData) => (
           <li className="safe" key={foodData.id} style={{color: getGradientColor(foodData.warningPercentage)}}> 
             <div>
-              <strong>{foodData.itemName}</strong>
+              <strong className='foodName'>{foodData.itemName}</strong>
               <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
             </div>
             <button onClick={() => deleteFood(foodData.id)}>Remove</button>

@@ -36,6 +36,7 @@ const AddItemForm = ({ addItem }) => {
         }}
       />
       <input
+        className='dateInput'
         type="date"
         placeholder="Choose expiry date"
         value={expiryDate}
