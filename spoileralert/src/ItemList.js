@@ -1,5 +1,3 @@
-// ItemList.js
-
 import React from 'react';
 
 const ItemList = ({ items, removeItem }) => {
@@ -7,7 +5,10 @@ const ItemList = ({ items, removeItem }) => {
     <ul>
       {items.map((item) => (
         <li key={item.id}>
-          {item.name}
+          <div>
+            <strong>{item.name}</strong>
+            <p>Expiry Date: {item.expiryDate}</p>
+          </div>
           <button onClick={() => removeItem(item.id)}>Remove</button>
         </li>
       ))}
