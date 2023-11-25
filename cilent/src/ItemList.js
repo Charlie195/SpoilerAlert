@@ -21,6 +21,13 @@ const ItemList = ({ items, removeItem }) => {
     });
   };
 
+  const displayTimeLeft = (time) => {
+    if (time < 0) {
+      return "NONE"
+    }
+    return Math.ceil(time / 86400000)
+  }
+
   useEffect(() => {
     axios.get("http://localhost:3001/foods")
     .then((response) => {
@@ -38,11 +45,38 @@ const ItemList = ({ items, removeItem }) => {
   return (
     <div>
       {foodData && <ul>
-        {foodData.map((foodData) => (
+        <h2>Expired</h2>
+        {foodData.filter((food) => {
+          return food.state == "Expired";
+        }).map((foodData) => (
           <li key={foodData.id}>
             <div>
               <strong>{foodData.itemName}</strong>
-              <p>Expiry Date: {foodData.expiryDate}</p>
+              <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
+            </div>
+            <button onClick={() => deleteFood(foodData.id)}>Remove</button>
+          </li>
+        ))}
+        <h2>Warning</h2>
+        {foodData.filter((food) => {
+          return food.state == "Warning";
+        }).map((foodData) => (
+          <li key={foodData.id}>
+            <div>
+              <strong>{foodData.itemName}</strong>
+              <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
+            </div>
+            <button onClick={() => deleteFood(foodData.id)}>Remove</button>
+          </li>
+        ))}
+        <h2>Safe</h2>
+        {foodData.filter((food) => {
+          return food.state == "Safe";
+        }).map((foodData) => (
+          <li key={foodData.id}>
+            <div>
+              <strong>{foodData.itemName}</strong>
+              <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
             </div>
             <button onClick={() => deleteFood(foodData.id)}>Remove</button>
           </li>
