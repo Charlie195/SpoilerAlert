@@ -1,18 +1,19 @@
 {
   "dependencies": {
-    "mysql2": "^3.6.5"
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.5",
+    "web-push": "^3.6.6"
   },
   "name": "timer",
   "version": "1.0.0",
   "main": "database.js",
   "type": "module",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": ""
-
 }

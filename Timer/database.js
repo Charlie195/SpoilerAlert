@@ -9,6 +9,9 @@ const pool = mysql.createPool({
 
 const result = await pool.query("SELECT * FROM foodtracker.foods")
 
-// console.log(result);
+const listOfFoodItems = result[0];
+(console.log(listOfFoodItems))
 
-console.log(result[0])
+/* Process the items */
+
+// 
