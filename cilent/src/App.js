@@ -3,6 +3,9 @@ import NightModeToggle from './NightModeToggle.js'
 import Header from './Header.js';
 import AddItemForm from './AddItemForm.js';
 import ItemList from './ItemList.js';
+import spoilerAlertWhiteLogo from "./spoilerAlertWhiteLogo.png";
+import spoilerAlertBlackLogo from "./spoilerAlertBlackLogo.png";
+
 // import mysql from 'mysql';
 
 
@@ -23,29 +26,12 @@ function App() {
     setItems(updatedItems);
   };
 
-  // async function fetchData() {
-  //   const pool = mysql.createPool({
-  //     host: 'localhost',
-  //     user: 'root',
-  //     password: 'password',
-  //     database: 'foodtracker'
-  //   }).promise()
-    
-  //   const result = await pool.query("SELECT * FROM foodtracker.foods")
-    
-  //   const listOfFoodItems = result[0];
-  //   (console.log(listOfFoodItems))
-  // };
-
   return (
     <div id="justforhover" className={`container ${nightMode ? 'night-mode' : ''}`}>
-      <NightModeToggle toggleNightMode={toggleNightMode} nightMode={nightMode} />
+      
       <div className={`app-container ${nightMode ? 'night-mode' : ''}`}>
-        
-        
-        
-        
-        <Header />
+        <NightModeToggle toggleNightMode={toggleNightMode} nightMode={nightMode} />
+        <Header nightMode={nightMode} />
         
         
         <AddItemForm className='search' addItem={addItem} />

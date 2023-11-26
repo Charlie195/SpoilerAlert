@@ -60,6 +60,7 @@ body {
   max-width: 1000px;
   margin: 20px auto;
   padding: 20px;
+  position: relative;
 
   background-color: #333;
   color: #fff;
@@ -80,7 +81,7 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 3em;
+  font-size: 3.4em;
 }
 
 h2 {
@@ -105,6 +106,17 @@ input {
   /* border-color: #333; */
 }
 
+.header {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.header img {
+  position: absolute;
+  top: -30px;
+  left: 10px;
+}
+
 form {
   display: flex;
   width: 100%;
@@ -113,7 +125,9 @@ form {
   justify-self: center;
 }
 
-
+img {
+  width: 125px;
+}
 
 ul {
   list-style: none;
@@ -159,7 +173,6 @@ button {
   border-radius: 10px;
   border: 5px;
   color: #ccc;
-  
   cursor: pointer;
   transition: 0.5s;
 }
@@ -179,6 +192,9 @@ input {
 
 button.night-mode-toggle {
   padding: 10px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
   
   border: #ccc;
   border-bottom: 1px solid #333;
@@ -186,7 +202,7 @@ button.night-mode-toggle {
   color: #fff;
   cursor: pointer;
   transition: background-color 0.5s, color 0.5s;
-  border-radius: 5px;
+  border-radius: 15px;
 
 }
 
