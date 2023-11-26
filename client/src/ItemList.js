@@ -26,7 +26,10 @@ const ItemList = ({ items, removeItem }) => {
 
   const displayTimeLeft = (time) => {
     if (time < 0) {
-      return "NONE"
+      return "NONE";
+    }
+    if (Math.ceil(time / 86400000) == 1) {
+      return "1 day";
     }
     return Math.ceil(time / 86400000) + " days";
   }
