@@ -27,7 +27,7 @@ Follow these steps to run SpoilerAlert on your local machine:
 1. Clone the repository:
    ```bash
    git clone https://github.com/Austinwu-rgb/SpoilerAlert.git
-   cd spoileralert
+   cd SpoilerAlert
 
 2. Install dependencies:
    ```bash
