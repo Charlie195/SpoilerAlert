@@ -29,19 +29,28 @@ Follow these steps to run SpoilerAlert on your local machine:
    git clone https://github.com/Austinwu-rgb/SpoilerAlert.git
    cd SpoilerAlert
 
-2. Install dependencies:
-   ```bash
-   npm install
-
-3. Startup the backend on your local machine:
+2. Startup the backend on your local machine:
    ```bash
    cd server
+   ```
+   2.a Install dependencies:
+   ```bash
+   npm install
+   ```
+   ```bash
    node server.js
+
+3.  Startup another bash window
    
 4.  Launch the React app:
     ```bash
-    cd ..
     cd client
+    ```
+    4.a Install dependencies:
+    ```bash
+    npm install
+    ```
+    ```bash
     npm start
     
 5.  Try it out!
