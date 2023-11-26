@@ -16,7 +16,7 @@ SpoilerAlert is a simple web application that helps you keep track of the foods 
 
 ## Video Demo
 
-![Watch_A_Demo!](https://youtu.be/FPIiiiyEyks)
+[Watch_A_Demo!](https://youtu.be/FPIiiiyEyks)
 
 ## Getting Started
 
