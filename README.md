@@ -10,7 +10,7 @@ SpoilerAlert is a simple web application that helps you keep track of the foods 
 
 ## Screenshots
 
-![Screenshot 1](screenshots/screenshot1.png)
+![image](https://github.com/Austinwu-rgb/SpoilerAlert/assets/63604550/404925d6-fa40-4d1f-967e-b4a65143e817)
 ![Screenshot 2](screenshots/screenshot2.png)
 
 ## Getting Started
