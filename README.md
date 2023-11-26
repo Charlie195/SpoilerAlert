@@ -37,7 +37,8 @@ Follow these steps to run SpoilerAlert on your local machine:
    ```bash
    npm install
    ```
-   2.b Start
+   
+   2.b Start:
    ```bash
    node server.js
 
@@ -51,7 +52,8 @@ Follow these steps to run SpoilerAlert on your local machine:
     ```bash
     npm install
     ```
-    4.b Launch
+    
+    4.b Launch:
     ```bash
     npm start
     
