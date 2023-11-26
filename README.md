@@ -14,6 +14,10 @@ SpoilerAlert is a simple web application that helps you keep track of the foods 
 
 ![image](https://github.com/Austinwu-rgb/SpoilerAlert/assets/63604550/562163de-06f2-4355-9ad4-dadd96004959)
 
+## Video Demo
+
+[![Watch the video](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://youtu.be/FPIiiiyEyks)
+
 ## Getting Started
 
 Requirements: Node.js
