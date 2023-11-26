@@ -1,6 +1,6 @@
 # SpoilerAlert - Food Expiry Tracker
 
-![image](https://github.com/Austinwu-rgb/SpoilerAlert/assets/63604550/69f3465b-2410-4a74-89e9-93a0518746b2)
+![image](https://github.com/Austinwu-rgb/SpoilerAlert/assets/63604550/bbe92e63-4200-4f39-a08c-5c6a82c81e75)
 
 SpoilerAlert is a simple web application that helps you keep track of the foods you have and their expiry dates. It warns you when a food item is about to expire, ensuring you don't miss any important dates.
 
@@ -11,8 +11,6 @@ SpoilerAlert is a simple web application that helps you keep track of the foods 
 - **Night Mode:** Switch between day and night mode for comfortable use in different lighting conditions.
 
 ## Screenshots
-
-![image](https://github.com/Austinwu-rgb/SpoilerAlert/assets/63604550/0cf52e3b-35c7-4440-abfc-40f4425ae6f0)
 
 ![image](https://github.com/Austinwu-rgb/SpoilerAlert/assets/63604550/6f774f0b-8a71-49b6-9423-de12e2d30f61)
 
