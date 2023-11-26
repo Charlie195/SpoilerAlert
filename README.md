@@ -37,12 +37,13 @@ Follow these steps to run SpoilerAlert on your local machine:
    ```bash
    npm install
    ```
+   2.b Start
    ```bash
    node server.js
 
-3.  Startup another bash window
+4.  Startup another bash window
    
-4.  Launch the React app:
+5.  Launch the React app:
     ```bash
     cd client
     ```
@@ -50,7 +51,8 @@ Follow these steps to run SpoilerAlert on your local machine:
     ```bash
     npm install
     ```
+    4.b Launch
     ```bash
     npm start
     
-5.  Try it out!
+6.  Try it out!
