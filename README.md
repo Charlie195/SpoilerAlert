@@ -1,5 +1,7 @@
 # SpoilerAlert - Food Expiry Tracker
 
+![image](https://github.com/Austinwu-rgb/SpoilerAlert/assets/63604550/69f3465b-2410-4a74-89e9-93a0518746b2)
+
 SpoilerAlert is a simple web application that helps you keep track of the foods you have and their expiry dates. It warns you when a food item is about to expire, ensuring you don't miss any important dates.
 
 ## Features
@@ -12,11 +14,11 @@ SpoilerAlert is a simple web application that helps you keep track of the foods 
 
 ![image](https://github.com/Austinwu-rgb/SpoilerAlert/assets/63604550/0cf52e3b-35c7-4440-abfc-40f4425ae6f0)
 
-![image](https://github.com/Austinwu-rgb/SpoilerAlert/assets/63604550/562163de-06f2-4355-9ad4-dadd96004959)
+![image](https://github.com/Austinwu-rgb/SpoilerAlert/assets/63604550/6f774f0b-8a71-49b6-9423-de12e2d30f61)
 
 ## Video Demo
 
-[![Watch the video](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID/0.jpg)](https://youtu.be/FPIiiiyEyks)
+[![Watch the video](![image](https://github.com/Austinwu-rgb/SpoilerAlert/assets/63604550/4c4d86ed-6754-4bb3-b379-1ac5055c5df4))](https://youtu.be/FPIiiiyEyks)
 
 ## Getting Started
 
