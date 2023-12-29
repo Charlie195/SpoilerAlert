@@ -3,9 +3,6 @@ import axios from 'axios';
 import { useState, useEffect } from "react";
 import { processItems, sortByRawTimeLeft } from "./processData";
 
-const test = [{id: 30, itemName: 'Parth', expiryDate: '2023-11-25', dateNow: '1700922242989'},
-              {id: 32, itemName: 'hey', expiryDate: '2023-11-09', dateNow: '1700932616264'}]
-
 
 const ItemList = ({ items, removeItem }) => {
   // const [addButtonPressed, setAddButtonPressed] = useState(false);
@@ -56,7 +53,7 @@ const ItemList = ({ items, removeItem }) => {
       {foodData && <ul>
         <h2 >Expired</h2>
         {foodData.filter((food) => {
-          return food.state == "Expired";
+          return food.state === "Expired";
         }).map((foodData) => (
           <li className="expired" key={foodData.id} style={{color: getGradientColor(foodData.warningPercentage)}}>
             <div>
@@ -68,7 +65,7 @@ const ItemList = ({ items, removeItem }) => {
         ))}
         <h2>Warning</h2>
         {foodData.filter((food) => {
-          return food.state == "Warning";
+          return food.state === "Warning";
         }).map((foodData) => (
           <li className="warning" key={foodData.id} style={{color: getGradientColor(foodData.warningPercentage)}}> 
             <div>
@@ -80,7 +77,7 @@ const ItemList = ({ items, removeItem }) => {
         ))}
         <h2>Safe</h2>
         {foodData.filter((food) => {
-          return food.state == "Safe";
+          return food.state === "Safe";
         }).map((foodData) => (
           <li className="safe" key={foodData.id} style={{color: getGradientColor(foodData.warningPercentage)}}> 
             <div>

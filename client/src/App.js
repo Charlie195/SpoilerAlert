@@ -3,11 +3,6 @@ import NightModeToggle from './NightModeToggle.js'
 import Header from './Header.js';
 import AddItemForm from './AddItemForm.js';
 import ItemList from './ItemList.js';
-import spoilerAlertWhiteLogo from "./spoilerAlertWhiteLogo.png";
-import spoilerAlertBlackLogo from "./spoilerAlertBlackLogo.png";
-
-// import mysql from 'mysql';
-
 
 function App() {
   const [items, setItems] = useState([]);

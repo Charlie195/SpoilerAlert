@@ -12,7 +12,7 @@
 
 -- INSERT INTO `foods` (itemName, expiryDate, dateNow) VALUES (Lobster,2023-12-31,1703056183265)
 
-CREATE DATABASE foodtracker;
+-- CREATE DATABASE foodtracker;
 use foodtracker;
 
 CREATE TABLE foods (
@@ -22,4 +22,8 @@ CREATE TABLE foods (
   dateNow VARCHAR(45) NOT NULL,
   PRIMARY KEY (id));
 
-INSERT INTO foods (itemName, expiryDate, dateNow) VALUES ("Lobster",2023-12-31,1703056183265)
+INSERT INTO foods (itemName, expiryDate, dateNow) VALUES ('Lobster','2023-12-31','1703056183265');
+
+-- CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'password';
+ALTER USER 'myuser'IDENTIFIED WITH 'mysql_native_password' BY 'password';
+FLUSH PRIVILEGES;
