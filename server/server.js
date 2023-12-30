@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-    host: "database-c",
+    host: "database_c",
     user: "myuser",
     password: "password",
     database: "foodtracker"

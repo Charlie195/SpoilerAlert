@@ -45,7 +45,7 @@ const ItemList = ({ items, removeItem }) => {
     //   setFoodData(foodData);
     // }, 5 * 1000); 
 
-    // setFoodData(foodData);
+    // // setFoodData(foodData);
 
     // return () => clearInterval(intervalId);
   }, [items]);

@@ -1,14 +1,27 @@
 version: "3.8"
 services:
-  client:
-    build: ./client
-    container_name: client_container
-    ports:
-      - "3000:3000"
+  database:
+    build: ./database
+    container_name: database_c
   server:
     build: ./server
-    container_name: server_container
+    container_name: server_c
     ports:
-      - "4000:4000"
+      - "3001:3001"
+    volumes:
+      - ./server:/server
+      - /server/node_modules
+    depends_on:
+      - database
+  client:
+    build: ./client
+    container_name: client_c
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/client
+      - /client/node_modules
     stdin_open: true
     tty: true
+    depends_on:
+      - server

@@ -25,5 +25,6 @@ CREATE TABLE foods (
 INSERT INTO foods (itemName, expiryDate, dateNow) VALUES ('Lobster','2023-12-31','1703056183265');
 
 -- CREATE USER 'myuser'@'localhost' IDENTIFIED BY 'password';
-ALTER USER 'myuser'IDENTIFIED WITH 'mysql_native_password' BY 'password';
-FLUSH PRIVILEGES;
+ALTER USER 'myuser' IDENTIFIED WITH 'caching_sha2_password' BY 'password';
+-- ALTER USER 'root' IDENTIFIED WITH 'mysql_native_password' BY 'root_password';
+-- FLUSH PRIVILEGES;
