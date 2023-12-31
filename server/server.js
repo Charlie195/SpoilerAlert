@@ -10,7 +10,7 @@ const db = mysql.createConnection({
     host: "database_c",
     user: "myuser",
     password: "password",
-    database: "foodtracker"
+    database: "foodtracker",
     // port: "3307"
 })
 
