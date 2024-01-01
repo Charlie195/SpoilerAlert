@@ -46,7 +46,7 @@ export function processItems(items) {
 
         // Push the processed item into the new array
         processedItems.push({
-            id: item.id,
+            _id: item._id,
             itemName: item.itemName,
             expiryDate: item.expiryDate,
             state: state,

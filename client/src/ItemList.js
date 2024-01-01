@@ -9,11 +9,14 @@ const ItemList = ({ items, removeItem }) => {
   // const [deleteButtonPressed, setDeleteButtonPressed] = useState(false);
   const [foodData, setFoodData] = useState(null);
 
-  const deleteFood = (id) => {
-    axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
+  const deleteFood = (_id) => {
+    console.log("In deleteFood")
+    console.log(_id)
+    axios.delete(`http://localhost:3001/delete/${_id}`).then((response) => {
+      console.log(_id)
       setFoodData(
         foodData.filter((val) => {
-          return val.id !== id;
+          return val._id !== _id;
         })
       );
     });
@@ -57,36 +60,36 @@ const ItemList = ({ items, removeItem }) => {
         {foodData.filter((food) => {
           return food.state === "Expired";
         }).map((foodData) => (
-          <li className="expired" key={foodData.id} style={{color: getGradientColor(foodData.warningPercentage)}}>
+          <li className="expired" key={foodData._id} style={{color: getGradientColor(foodData.warningPercentage)}}>
             <div>
               <strong className='foodName'>{foodData.itemName}</strong>
               <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
             </div>
-            <button onClick={() => deleteFood(foodData.id)}>Remove</button>
+            <button onClick={() => deleteFood(foodData._id)}>Remove</button>
           </li>
         ))}
         <h2>Warning</h2>
         {foodData.filter((food) => {
           return food.state === "Warning";
         }).map((foodData) => (
-          <li className="warning" key={foodData.id} style={{color: getGradientColor(foodData.warningPercentage)}}> 
+          <li className="warning" key={foodData._id} style={{color: getGradientColor(foodData.warningPercentage)}}> 
             <div>
               <strong className='foodName'>{foodData.itemName}</strong>
               <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
             </div>
-            <button onClick={() => deleteFood(foodData.id)}>Remove</button>
+            <button onClick={() => deleteFood(foodData._id)}>Remove</button>
           </li>
         ))}
         <h2>Safe</h2>
         {foodData.filter((food) => {
           return food.state === "Safe";
         }).map((foodData) => (
-          <li className="safe" key={foodData.id} style={{color: getGradientColor(foodData.warningPercentage)}}> 
+          <li className="safe" key={foodData._id} style={{color: getGradientColor(foodData.warningPercentage)}}> 
             <div>
               <strong className='foodName'>{foodData.itemName}</strong>
               <p>Time Left: {displayTimeLeft(foodData.rawTimeLeft)}</p>
             </div>
-            <button onClick={() => deleteFood(foodData.id)}>Remove</button>
+            <button onClick={() => deleteFood(foodData._id)}>Remove</button>
           </li>
         ))}
       </ul>}
