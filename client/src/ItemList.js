@@ -10,10 +10,7 @@ const ItemList = ({ items, removeItem }) => {
   const [foodData, setFoodData] = useState(null);
 
   const deleteFood = (_id) => {
-    console.log("In deleteFood")
-    console.log(_id)
     axios.delete(`http://localhost:3001/delete/${_id}`).then((response) => {
-      console.log(_id)
       setFoodData(
         foodData.filter((val) => {
           return val._id !== _id;
@@ -34,8 +31,6 @@ const ItemList = ({ items, removeItem }) => {
   useEffect(() => {
     axios.get("http://localhost:3001/foods")
     .then((response) => {
-      // setFoodData(sortByRawTimeLeft(processItems(foodData)));
-      // console.log(sortByRawTimeLeft(processItems(foodData)));
       setFoodData(sortByRawTimeLeft(processItems(response.data)));
       // if (foodData !== null) {
       //   console.log(processItems(foodData));
