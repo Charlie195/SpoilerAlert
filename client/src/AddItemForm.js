@@ -11,18 +11,16 @@ const AddItemForm = ({ addItem }) => {
       expiryDate: expiryDate,
       dateNow: Date.now()
     }).then(() => {
-      console.log("success");
+      if (itemName.trim() !== '' && expiryDate.trim() !== '') {
+        addItem({ id: Date.now(), name: itemName, expiryDate });
+        setItemName('');
+        setExpiryDate('');
+      }
     });
   } 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
-    if (itemName.trim() !== '' && expiryDate.trim() !== '') {
-      addItem({ id: Date.now(), name: itemName, expiryDate });
-      setItemName('');
-      setExpiryDate('');
-    }
   };
 
   // Get the current date and format it as "YYYY-MM-DD"
