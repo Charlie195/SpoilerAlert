@@ -1,8 +1,5 @@
 version: "3.8"
 services:
-  database:
-    build: ./database
-    container_name: database_c
   server:
     build: ./server
     container_name: server_c
@@ -11,8 +8,6 @@ services:
     volumes:
       - ./server:/server
       - /server/node_modules
-    depends_on:
-      - database
   client:
     build: ./client
     container_name: client_c

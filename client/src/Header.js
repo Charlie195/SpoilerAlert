@@ -7,7 +7,7 @@ const Header = ({ nightMode }) => {
 
   return (
     <div className="header">
-      <h1>SpoilerAlert</h1>
+      <h1>SpoilerAlert Header</h1>
       <img src={logoSrc} alt={nightMode ? 'black logo' : 'white logo'} />
     </div>
   );

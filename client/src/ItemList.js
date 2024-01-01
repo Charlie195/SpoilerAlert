@@ -5,8 +5,6 @@ import { processItems, sortByRawTimeLeft } from "./processData";
 
 
 const ItemList = ({ items, removeItem }) => {
-  // const [addButtonPressed, setAddButtonPressed] = useState(false);
-  // const [deleteButtonPressed, setDeleteButtonPressed] = useState(false);
   const [foodData, setFoodData] = useState(null);
 
   const deleteFood = (_id) => {
